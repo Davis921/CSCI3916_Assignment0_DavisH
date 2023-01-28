@@ -58,6 +58,7 @@ Response Headers
 
 ======================================================================================
     Both queries had identical req/res headers, the explanations are the same.
-    The only header values that change between the two requests were:
+    The only header values that changed between the two request/responses were:
         - Date:  the 2nd request is in fact later than the 1st
         - Postman-Token:  Looks like Postman generated a new token for each request
+======================================================================================
