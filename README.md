@@ -34,6 +34,7 @@ X Modify /utils/googlebooks.js
             requestHeader: response.config.headers
         }
     ```
+    
 - Review the HTTP Headers in the Request and Response – create text file headers.txt and describe each key value pair in the HTTP header in both request and response and check it in with the project to GitHub (e.g. what is the content-type and what does it mean)
 
 ## Submission
