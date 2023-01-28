@@ -1,0 +1,64 @@
+Req/Res Header Explanation for 2 Google Book API queries
+
+Query 1: Get Books with Turing in title and description
+Request Headers
+    User-Agent: PostmanRuntime/7.30.0                           //Client agent software and version is making the API call
+    Accept: */*                                                 //Client will accept any response format (XML or HTML)
+    Postman-Token: 84039241-9706-4a2e-b3c9-f3300a326219         //Token generated from agent software for Host to accept and use if needed
+    Host: www.googleapis.com                                    //HTTP request destination
+    Accept-Encoding: gzip, deflate, br                          //Client will accept these data encoding (compression) responses
+                                                                    //**Defintions taken from MDN docs: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept-Encoding **//
+                                                                    gzip: uses the Lempel-Ziv coding
+                                                                    deflate: uses the zlib structure with the deflate compression algorithm.
+                                                                    br: uses the Brotli algorithm.
+    Connection: keep-alive                                      //Asking for a persistent connection (subsequent requests can be sent to the same server)
+Response Headers
+    Content-Type: application/json; charset=UTF-8               //Gives the original MIME (media type) of the resource, UTF-8 is 8bit char mapping of resource                                                  
+    Vary: Origin                                                //Server states to client that the request header Origin, which contains request origin (host, http(s), port) influenced response representation
+                                                                        //Server will match those headers to future requests to enfore same origin policy: prevent web page from making request than this one.
+    Vary: X-Origin                                              //Server used a non-standard RFC response format based on that same non-standard request header 
+    Vary: Referer                                               //Server tracks where traffic came from: what was previous URL that linked to this URL
+    Content-Encoding: gzip                                      //Sends back gzip encoding which is in request's Accept-Encoding header
+    Date: Sat, 28 Jan 2023 21:44:59 GMT                         //Timestamp of response creation
+    Server: ESF                                                 //Google's custom, proprietary web server
+    Cache-Control: private                                      //Cache exists in the client, not server
+    X-XSS-Protection: 0                                         //0 means disabled from filtering which would stop pages from loading if detected an attempted XSS attack
+    X-Frame-Options: SAMEORIGIN                                 //Only allow client origin to render as frame, iframe, embeed, or obj to avoid other sites embedding the content into theirs.
+    X-Content-Type-Options: nosniff                             //Server blocks requests if MIME type is not text, css, or a JS MIME type
+    Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000     //Server states that another server can also be treated as Authoritative for that client's origin.
+                                                                    //h3: that service uses HTTP3 on port 443 
+                                                                    //ma: max-age (in ms) of this alternative service
+                                                                    //h3-29: version 29 of HTTP/3
+    Transfer-Encoding: chunked                                  //Used for network node hop-to-hop. Data is sent in chunks. Often used for larger amounts of data.
+
+
+
+Query 2: Get Book with specific id
+Request Headers
+    User-Agent: PostmanRuntime/7.30.0
+    Accept: */*
+    Postman-Token: 96652cb2-5fa6-4f45-bb73-e2ad1e66a0c6
+    Host: www.googleapis.com
+    Accept-Encoding: gzip, deflate, br
+    Connection: keep-alive
+Response Headers
+    Content-Type: application/json; charset=UTF-8
+    Vary: Origin
+    Vary: X-Origin
+    Vary: Referer
+    Content-Encoding: gzip
+    Date: Sat, 28 Jan 2023 21:45:00 GMT
+    Server: ESF
+    Cache-Control: private
+    X-XSS-Protection: 0
+    X-Frame-Options: SAMEORIGIN
+    X-Content-Type-Options: nosniff
+    Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+    Transfer-Encoding: chunked
+
+======================================================================================
+    Both queries had identical req/res headers, the explanations are the same.
+    The only header values that changed between the two request/responses were:
+        - Date:  the 2nd request is in fact later than the 1st
+        - Postman-Token:  Looks like Postman generated a new token for each request
+======================================================================================
