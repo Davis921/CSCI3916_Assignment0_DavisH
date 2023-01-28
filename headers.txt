@@ -56,6 +56,7 @@ Response Headers
     Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
     Transfer-Encoding: chunked
 
+======================================================================================
     Both queries had identical req/res headers, the explanations are the same.
     The only header values that change between the two requests were:
         - Date:  the 2nd request is in fact later than the 1st
