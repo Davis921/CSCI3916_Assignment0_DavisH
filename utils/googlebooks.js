@@ -8,8 +8,6 @@ module.exports = async (phrase) => {
         }
     })
 
-
-    //
     //TODO: return a formattedObj
     var formattedObj = {
         data: results.data,
@@ -20,5 +18,6 @@ module.exports = async (phrase) => {
     }
 
     //TODO: return the formattedObject
-    return JSON.stringify(results.data);
+    console.log(JSON.stringify(formattedObj))
+    return formattedObj;
 }
