@@ -1,1 +1,113 @@
+Headers for Book request
+Request Headers:
+1. Key: Postman-Token, Value:generated token value when request is sent
+The header looks to be for generating a unique identifier token for this given postman request
+  
+2. Key: Host, Value: calculated when request is sent
+Looks to be a value of identifier code that is generated when the request is sent to identify the host
 
+3. Key: User-Agent, Value: PostmanRuntime/7.43.0
+Identifies the postman agent version used for the request
+
+4. Key: Accept, Value: */*
+This looks to be the request accept value, basically the value it wants to see to ensure the request was accepted?
+
+5. Key: Accept-Encoding, Value: gzip, deflate, br
+This looks to be the request's accepted formats for the response
+
+6. Key: Connection, Value: keep-alive
+This looks to be the type of the request is making, in this case keep alive should meen a persistent connection
+
+Response Headers:
+1. Key: Content-Type, Value: application/json; charset=UTF-8
+This looks to be a header identifying the content that is in the response, including the application type, json, and the character encoding used in this case UTF-8
+
+2. Key: Vary, Value: Origin
+This value I think is stating that the response may vary based on the origin
+
+3. Key: Vary, Value: X-Origin
+Similarly here I believe that this is also saying that the response may vary based on the x-origin
+
+4. Key: Vary, Value: Referer
+Then again based on the referer header in the request this may vary the response
+
+5. Key: Content-Encoding, Value: gzip
+This states that the response is encoded using the gzip format
+
+6. Key: Date, Value: Mon, 03 Feb 2025 01:51:57 GMT
+The date and time, as well sa the timezone of the request
+
+7. Key: Server, Value: ESF
+This key value pair contains the Server name from which the response came
+
+8. Key: X-XSS-Protection, Value: 0
+I believe this to be an option for certain security measures that could be changed based on the request, in this case there are none
+
+9. Key: X-Frame-Options, Value: SAMEORIGIN
+I believe this has to do with the dataframe of the response and the value being same origin implies that the dataframe comes from the same location as the main response
+
+10. Key: X-Content-Type-Options, Value: nosniff
+I believe this to be another optional header for security purposes that looks to be some sort of intrusion into the content of the response in order to sniff out details of the response that may be malicious
+
+11. Key: Alt-Svc, Value: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Based on my understanding this is a header to include alternate services should the primary method of connection between the request and response be non functional
+
+12. Key: Transfer-Encoding, Value: chunked
+This is another encoding header for the data transfer, if I understand this correctly this means that the data is encoded in chunks then sent across in encoded portions
+
+Headers for Request2_ChainingRequest
+Request Headers
+1. Key: Postman-Token, Value: <calculated when request is sent>
+The header looks to be for generating a unique identifier token for this given postman request
+
+2. Key: Host, Value: <calculated when request is sent>
+Looks to be a value of identifier code that is generated when the request is sent to identify the host
+
+3. Key: User-Agent, Value: PostmanRuntime/7.43.0
+Identifies the postman agent version used for the request
+
+4. Key: Accept, Value: */*
+This looks to be the request accept value, basically the value it wants to see to ensure the request was accepted?
+
+5. Key: Accept-Encoding, Value: gzip, deflate, br
+This looks to be the request's accepted formats for the response
+
+6. Key: Connection, Value: keep-alive
+This looks to be the type of the request is making, in this case keep alive should meen a persistent connection
+
+Response Headers
+1. Key: Content-Type, Value: application/json; charset=UTF-8
+This looks to be a header identifying the content that is in the response, including the application type, json, and the character encoding used in this case UTF-8
+
+2. Key: Vary, Value: Origin
+This value I think is stating that the response may vary based on the origin
+
+3. Key: Vary, Value: X-Origin
+Similarly here I believe that this is also saying that the response may vary based on the x-origin
+
+4. Key: Vary, Value: Referer
+Then again based on the referer header in the request this may vary the response
+
+5. Key: Content-Encoding, Value: gzip
+This states that the response is encoded using the gzip format
+
+6. Key: Date, Value: Mon, 03 Feb 2025 02:21:26 GMT
+The date and time, as well sa the timezone of the request
+
+7. Key: Server, Value: ESF
+This key value pair contains the Server name from which the response came
+
+8. Key: X-XSS-Protection, Value: 0
+I believe this to be an option for certain security measures that could be changed based on the request, in this case there are none
+
+9. Key: X-Frame-Options, Value: SAMEORIGIN
+I believe this has to do with the dataframe of the response and the value being same origin implies that the dataframe comes from the same location as the main response
+
+10. Key: X-Content-Type-Options, Value: nosniff
+I believe this to be another optional header for security purposes that looks to be some sort of intrusion into the content of the response in order to sniff out details of the response that may be malicious
+
+11. Key: Alt-Svc, Value: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Based on my understanding this is a header to include alternate services should the primary method of connection between the request and response be non functional
+
+12. Key: Transfer-Encoding, Value: chunked
+This is another encoding header for the data transfer, if I understand this correctly this means that the data is encoded in chunks then sent across in encoded portions
