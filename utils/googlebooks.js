@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 module.exports = async (phrase) => {
-    const result = await axios.get('https://www.googleapis.com/books/v1/volumes', {
+    const response = await axios.get('https://www.googleapis.com/books/v1/volumes', {
         params: {
             format: 'json',
             q: `${phrase}`
@@ -12,11 +12,11 @@ module.exports = async (phrase) => {
     //
     //TODO: return a formattedObj
     var formattedObj = {
-        data: result.data, 
-        status: result.status, 
-        statusText: result.statusText, 
-        headers: result.headers,
-        requestHeader: result.config.headers
+        data: response.data, 
+        status: response.status, 
+        statusText: response.statusText, 
+        headers: response.headers,
+        requestHeader: response.config.headers
     }
 
     //TODO: return the formattedObject
